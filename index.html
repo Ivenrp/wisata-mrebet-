@@ -1,0 +1,523 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Wisata Mrebet — Temukan Curug, Temukan Diri</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" />
+    <!-- CSS utama -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+    <header class="nav" id="siteNav" role="banner">
+        <div class="wrap">
+            <a href="#top" class="logo" aria-label="Wisata Mrebet beranda">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C12 2 6 9 6 14a6 6 0 0012 0c0-5-6-12-6-12z" fill="currentColor" opacity="0.9"/></svg>
+                Wisata Mrebet
+            </a>
+            <nav class="nav-links" id="navLinks" role="navigation" aria-label="Navigasi utama">
+                <a href="#top" data-close>Home</a>
+                <a href="#destinasi" data-close>Destinasi</a>
+                <a href="#aktivitas" data-close>Pengalaman</a>
+                <a href="#galeri" data-close>Galeri</a>
+                <a href="#acara" data-close>Acara</a>
+                <a href="#kunjungi" data-close>Kontak</a>
+                <!-- TOMBOL BOOK NOW → WHATSAPP -->
+                <a href="https://wa.me/6281398480422?text=Halo%20Wisata%20Mrebet%2C%20saya%20ingin%20booking%20kunjungan." target="_blank" class="btn btn-gold" data-close>Book Now</a>
+            </nav>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+                <a href="https://wa.me/6281398480422?text=Halo%20Wisata%20Mrebet%2C%20saya%20ingin%20booking%20kunjungan." target="_blank" class="btn btn-outline nav-desktop-only">Book Now</a>
+                <button class="burger" id="burgerBtn" aria-label="Buka menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                    <span class="sr-only">Menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top" aria-label="Hero utama Wisata Mrebet">
+        <div class="hero-media">
+            <!-- Gunakan hero lokal jika tersedia -->
+            <img src="assets/img/hero.jpg" alt="Curug tersembunyi di tengah hutan hujan Mrebet, Purbalingga" loading="eager" fetchpriority="high">
+        </div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">Purbalingga, Jawa Tengah</div>
+            <h1>Tempat di mana <em>hutan</em> menyimpan air terjunnya sendiri.</h1>
+            <p class="hero-sub">Mrebet adalah lipatan tenang di kaki pegunungan tengah Jawa — curug jernih, jalan setapak berkabut, dan udara yang belum pernah diburu siapa pun.</p>
+            <div class="hero-cta">
+                <a href="#destinasi" class="btn btn-gold">Jelajahi Mrebet</a>
+                <button class="play-btn" id="watchVideoBtn" aria-label="Tonton video perkenalan">
+                    <span class="play-circle"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+                    Watch Video
+                </button>
+            </div>
+
+            <div class="hero-quickbar">
+                <a class="quick-item" href="https://www.google.com/maps/dir/?api=1&destination=-7.3168897,109.3491433" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 20l-6-3V4l6 3 6-3 6 3v13l-6-3-6 3z"/><path d="M9 4v13M15 7v13"/></svg>
+                    <span class="quick-item-text"><span class="quick-item-label">Rute</span><span class="quick-item-value">Ambil Arah ke Mrebet</span></span>
+                </a>
+                <a class="quick-item" href="#destinasi">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21c-4-3-8-6.5-8-11a8 8 0 0116 0c0 4.5-4 8-8 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    <span class="quick-item-text"><span class="quick-item-label">Jelajah</span><span class="quick-item-value">7 Titik Curug</span></span>
+                </a>
+                <a class="quick-item" href="#kunjungi">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                    <span class="quick-item-text"><span class="quick-item-label">Jam Buka</span><span class="quick-item-value">06.00–17.00 WIB</span></span>
+                </a>
+                <a class="quick-item" href="#kunjungi">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><path d="M13 13h3v3h-3zM19 13v3M13 19h3M17 19h3v-3"/></svg>
+                    <span class="quick-item-text"><span class="quick-item-label">Akses Cepat</span><span class="quick-item-value">Scan QR Website</span></span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ================= MUST-SEE STRIP ================= -->
+    <section class="mustsee" aria-label="Destinasi wajib kunjungi">
+        <div class="wrap mustsee-inner">
+            <span class="mustsee-label">Wajib Dikunjungi</span>
+            <div class="mustsee-track">
+                <a class="mustsee-chip" href="https://www.google.com/maps/search/?api=1&query=Curug+Nini+Cipaku+Mrebet+Purbalingga" target="_blank" rel="noopener">
+                    <img src="assets/img/curug-nini.jpg" alt="" loading="lazy" width="30" height="30">Curug Nini
+                </a>
+                <a class="mustsee-chip" href="https://www.google.com/maps/search/?api=1&query=Curug+Perawan+Bojong+Mrebet+Purbalingga" target="_blank" rel="noopener">
+                    <img src="assets/img/curug-perawan.jpg" alt="" loading="lazy" width="30" height="30">Curug Perawan
+                </a>
+                <a class="mustsee-chip" href="https://www.google.com/maps/search/?api=1&query=Curug+Tempuran+Pengalusan+Mrebet+Purbalingga" target="_blank" rel="noopener">
+                    <img src="assets/img/curug-tempuran.jpg" alt="" loading="lazy" width="30" height="30">Curug Tempuran
+                </a>
+                <a class="mustsee-chip" href="https://www.google.com/maps/search/?api=1&query=Curug+Kedung+Siung+Serayu+Larangan+Mrebet+Purbalingga" target="_blank" rel="noopener">
+                    <img src="assets/img/curug-kedung-siung.jpg" alt="" loading="lazy" width="30" height="30">Curug Kedung Siung
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= RIVER DIVIDER ================= -->
+    <div class="river-divider" aria-hidden="true">
+        <svg viewBox="0 0 1280 120" preserveAspectRatio="none">
+            <path class="river-path" id="riverPath" d="M0,20 C 160,90 260,10 420,55 S 700,110 860,50 S 1120,15 1280,70" />
+        </svg>
+    </div>
+
+    <!-- ================= DISCOVER ================= -->
+    <section class="discover section-pad" id="discover" aria-label="Tentang Mrebet">
+        <div class="wrap discover-grid">
+            <div class="discover-text reveal">
+                <div class="eyebrow">Tentang Mrebet</div>
+                <h2>Sebuah desa kecil, dijaga oleh sungai yang jatuh dari perbukitan.</h2>
+                <p>Mrebet bukan destinasi yang dibuat untuk ramai. Ia sudah ada jauh sebelum peta menandainya — sungai yang mengukir batu selama ratusan tahun, pohon-pohon yang membentuk kanopi alami di atas jalan setapak, dan warga yang masih menyapa dengan tenang.</p>
+                <p>Di sinilah curug-curug tersembunyi mengalir tanpa terburu-buru, dan setiap sudut terasa seperti ditemukan, bukan dikunjungi.</p>
+                <div class="discover-stats">
+                    <div><span class="stat-num">7</span><div class="stat-label">Curug Utama</div></div>
+                    <div><span class="stat-num">450m</span><div class="stat-label">Ketinggian</div></div>
+                    <div><span class="stat-num">18°C</span><div class="stat-label">Suhu Rata-rata</div></div>
+                </div>
+            </div>
+            <div class="discover-media reveal">
+                <div class="img-main">
+                    <img src="assets/img/discover-main.jpg" alt="Jalan setapak berkabut menuju curug Mrebet" loading="lazy">
+                </div>
+                <div class="img-float">
+                    <img src="assets/img/discover-float.jpg" alt="Cahaya pagi menembus kanopi hutan Mrebet" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= DESTINATIONS ================= -->
+    <section class="destinations section-pad" id="destinasi" aria-label="Destinasi pilihan">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <div>
+                    <div class="eyebrow">Destinasi Pilihan</div>
+                    <h2>Tujuh curug, satu perjalanan yang tak akan sama dua kali.</h2>
+                </div>
+                <p class="desc">Setiap curug di Mrebet punya karakter berbeda — dari yang tenang untuk berendam, hingga yang menantang untuk didaki.</p>
+            </div>
+            <div class="dest-grid reveal-stagger reveal">
+                <div class="dest-card" style="--i:0">
+                    <img src="assets/img/curug-nini.jpg" alt="Curug Nini di Desa Cipaku, Mrebet" loading="lazy">
+                    <div class="dest-info">
+                        <span class="dest-num">01</span>
+                        <h3>Curug Nini</h3>
+                        <p>Air terjun setinggi 10 meter di Desa Cipaku dengan kolam alami yang lebar dan jernih, cocok untuk berenang sepanjang tahun.</p>
+                        <div class="dest-actions">
+                            <a href="#" class="dest-link">Jelajahi <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Curug+Nini+Cipaku+Mrebet+Purbalingga" target="_blank" rel="noopener" class="dest-maplink">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 20l-6-3V4l6 3 6-3 6 3v13l-6-3-6 3z"/><path d="M9 4v13M15 7v13"/></svg>
+                                Lihat di Peta
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" style="--i:1">
+                    <img src="assets/img/curug-perawan.jpg" alt="Curug Perawan di Desa Bojong, Mrebet" loading="lazy">
+                    <div class="dest-info">
+                        <span class="dest-num">02</span>
+                        <h3>Curug Perawan</h3>
+                        <p>Terletak di Desa Bojong, dikelilingi pepohonan rimbun dengan gemericik air yang menenangkan.</p>
+                        <div class="dest-actions">
+                            <a href="#" class="dest-link">Jelajahi <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Curug+Perawan+Bojong+Mrebet+Purbalingga" target="_blank" rel="noopener" class="dest-maplink">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 20l-6-3V4l6 3 6-3 6 3v13l-6-3-6 3z"/><path d="M9 4v13M15 7v13"/></svg>
+                                Lihat di Peta
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" style="--i:2">
+                    <img src="assets/img/curug-tempuran.jpg" alt="Curug Tempuran di Desa Pengalusan, Mrebet" loading="lazy">
+                    <div class="dest-info">
+                        <span class="dest-num">03</span>
+                        <h3>Curug Tempuran</h3>
+                        <p>Air terjun dua sisi yang populer di Desa Pengalusan, dengan akses jalan yang mudah dan area untuk memancing.</p>
+                        <div class="dest-actions">
+                            <a href="#" class="dest-link">Jelajahi <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Curug+Tempuran+Pengalusan+Mrebet+Purbalingga" target="_blank" rel="noopener" class="dest-maplink">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 20l-6-3V4l6 3 6-3 6 3v13l-6-3-6 3z"/><path d="M9 4v13M15 7v13"/></svg>
+                                Lihat di Peta
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" style="--i:3">
+                    <img src="assets/img/curug-kedung-siung.jpg" alt="Curug Kedung Siung di Desa Serayu Larangan, Mrebet" loading="lazy">
+                    <div class="dest-info">
+                        <span class="dest-num">04</span>
+                        <h3>Curug Kedung Siung</h3>
+                        <p>Hidden gem di Desa Serayu Larangan dengan kolam biru jernih dan tebing bebatuan eksotik.</p>
+                        <div class="dest-actions">
+                            <a href="#" class="dest-link">Jelajahi <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Curug+Kedung+Siung+Serayu+Larangan+Mrebet+Purbalingga" target="_blank" rel="noopener" class="dest-maplink">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 20l-6-3V4l6 3 6-3 6 3v13l-6-3-6 3z"/><path d="M9 4v13M15 7v13"/></svg>
+                                Lihat di Peta
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ACTIVITIES ================= -->
+    <section class="activities section-pad" id="aktivitas" aria-label="Pengalaman wisata">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <div>
+                    <div class="eyebrow">Pengalaman</div>
+                    <h2>Datang untuk pemandangannya, tinggal untuk keheningannya.</h2>
+                </div>
+                <p class="desc">Enam cara berbeda untuk mengenal Mrebet — pilih sesuai ritme perjalananmu.</p>
+            </div>
+            <div class="act-grid reveal-stagger reveal">
+                <div class="act-card" style="--i:0">
+                    <div class="act-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 20l4-9 4 9M12 20l4-9 4 9M8 11l4-7 4 7"/></svg></div>
+                    <h4>Camping</h4>
+                    <p>Bermalam di bawah kanopi pinus dengan suara sungai sebagai pengantar tidur.</p>
+                </div>
+                <div class="act-card" style="--i:1">
+                    <div class="act-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 20l6-14 4 8 3-5 5 11H3z"/></svg></div>
+                    <h4>Hiking</h4>
+                    <p>Jalur pendakian ringan hingga menantang menuju punggung Gunung Slamet.</p>
+                </div>
+                <div class="act-card" style="--i:2">
+                    <div class="act-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+                    <h4>Sunrise</h4>
+                    <p>Titik pandang timur menawarkan matahari terbit di atas lautan awan.</p>
+                </div>
+                <div class="act-card" style="--i:3">
+                    <div class="act-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><circle cx="12" cy="13" r="3.5"/></svg></div>
+                    <h4>Fotografi</h4>
+                    <p>Cahaya pagi menembus kabut — surga bagi pencari komposisi lanskap.</p>
+                </div>
+                <div class="act-card" style="--i:4">
+                    <div class="act-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 10h16M6 10V6a2 2 0 012-2h8a2 2 0 012 2v4M6 10v10M18 10v10M4 20h16"/></svg></div>
+                    <h4>Kuliner Lokal</h4>
+                    <p>Hidangan rumahan warga desa, dimasak dengan bumbu dan resep turun-temurun.</p>
+                </div>
+                <div class="act-card" style="--i:5">
+                    <div class="act-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2l2.5 6.5L21 9l-5 4 2 7-6-4-6 4 2-7-5-4 6.5-.5z"/></svg></div>
+                    <h4>Adventure</h4>
+                    <p>Susur sungai dan tebing rendah bagi yang mencari sedikit adrenalin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= WHY VISIT ================= -->
+    <section class="why section-pad" id="mengapa" aria-label="Alasan mengunjungi Mrebet">
+        <div class="wrap">
+            <div class="section-head reveal" style="margin-bottom:0;">
+                <div>
+                    <div class="eyebrow">Mengapa Mrebet</div>
+                    <h2>Alasan sederhana untuk mempercayai perjalanan ini.</h2>
+                </div>
+            </div>
+            <div class="why-grid reveal-stagger reveal">
+                <div class="why-item" style="--i:0">
+                    <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2C12 2 6 9 6 14a6 6 0 0012 0c0-5-6-12-6-12z"/></svg></div>
+                    <div class="why-num">7</div>
+                    <div class="why-label">Curug Aktif Dikunjungi</div>
+                </div>
+                <div class="why-item" style="--i:1">
+                    <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 4.6c-1.9-1.9-5-1.9-6.9 0L12 6.5l-1.9-1.9c-1.9-1.9-5-1.9-6.9 0-1.9 1.9-1.9 5 0 6.9L12 20.3l8.8-8.8c1.9-1.9 1.9-5 0-6.9z"/></svg></div>
+                    <div class="why-num">4.9</div>
+                    <div class="why-label">Rating Pengunjung</div>
+                </div>
+                <div class="why-item" style="--i:2">
+                    <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+                    <div class="why-num">3 Jam</div>
+                    <div class="why-label">Dari Purwokerto</div>
+                </div>
+                <div class="why-item" style="--i:3">
+                    <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21c-4-3-8-6.5-8-11a8 8 0 0116 0c0 4.5-4 8-8 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+                    <div class="why-num">12+</div>
+                    <div class="why-label">Titik Foto Ikonik</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="gallery section-pad" id="galeri" aria-label="Galeri foto Mrebet">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <div>
+                    <div class="eyebrow">Galeri</div>
+                    <h2>Mrebet, dilihat melalui mata para pengunjungnya.</h2>
+                </div>
+                <p class="desc">Sebuah koleksi momen — dari kabut pagi hingga cahaya keemasan sore hari.</p>
+            </div>
+            <div class="masonry reveal">
+                <div class="masonry-item"><img src="assets/img/gallery-1.jpg" alt="Curug utama Mrebet" loading="lazy"><span class="masonry-cap">Curug Utama</span></div>
+                <div class="masonry-item"><img src="assets/img/gallery-2.jpg" alt="Lanskap perbukitan Mrebet" loading="lazy"><span class="masonry-cap">Punggung Bukit</span></div>
+                <div class="masonry-item"><img src="assets/img/gallery-3.jpg" alt="Pegunungan di sekitar Mrebet" loading="lazy"><span class="masonry-cap">Gunung Slamet</span></div>
+                <div class="masonry-item"><img src="assets/img/gallery-4.jpg" alt="Jalur hutan Mrebet" loading="lazy"><span class="masonry-cap">Jalur Pinus</span></div>
+                <div class="masonry-item"><img src="assets/img/gallery-5.jpg" alt="Detail alam Mrebet" loading="lazy"><span class="masonry-cap">Kanopi Hutan</span></div>
+                <div class="masonry-item"><img src="assets/img/gallery-6.jpg" alt="Kabut pagi di Mrebet" loading="lazy"><span class="masonry-cap">Kabut Pagi</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EVENTS ================= -->
+    <section class="events section-pad" id="acara" aria-label="Acara mendatang">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <div>
+                    <div class="eyebrow">Acara Mendatang</div>
+                    <h2>Musim demi musim, Mrebet punya alasan baru untuk dikunjungi.</h2>
+                </div>
+            </div>
+            <div class="events-list reveal">
+                <div class="event-row">
+                    <div class="event-date"><span class="day">14</span><span class="month">Agustus</span></div>
+                    <div class="event-body"><h4>Festival Curug Mrebet</h4><p>Pasar kuliner lokal, pertunjukan seni tradisional, dan susur sungai bersama.</p></div>
+                    <span class="event-tag">Festival</span>
+                    <svg class="event-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </div>
+                <div class="event-row">
+                    <div class="event-date"><span class="day">02</span><span class="month">September</span></div>
+                    <div class="event-body"><h4>Camping Malam Purnama</h4><p>Berkemah bersama di tepi Telaga Bening, ditemani cerita rakyat setempat.</p></div>
+                    <span class="event-tag">Camping</span>
+                    <svg class="event-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </div>
+                <div class="event-row">
+                    <div class="event-date"><span class="day">21</span><span class="month">September</span></div>
+                    <div class="event-body"><h4>Sedekah Bumi Mrebet</h4><p>Upacara adat tahunan sebagai wujud syukur warga kepada alam.</p></div>
+                    <span class="event-tag">Budaya</span>
+                    <svg class="event-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </div>
+                <div class="event-row">
+                    <div class="event-date"><span class="day">10</span><span class="month">Oktober</span></div>
+                    <div class="event-body"><h4>Trail Run Punggung Slamet</h4><p>Lomba lari lintas alam 12K melewati hutan pinus dan titik pandang matahari terbit.</p></div>
+                    <span class="event-tag">Adventure</span>
+                    <svg class="event-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="testi section-pad" aria-label="Testimoni pengunjung">
+        <div class="wrap testi-inner reveal">
+            <div class="eyebrow" style="justify-content:center;">Cerita Pengunjung</div>
+            <div class="testi-track" style="margin-top:1.75rem;">
+                <div class="testi-slide active">
+                    <p>Saya sudah mengunjungi banyak curug di Jawa, tapi Mrebet punya ketenangan yang berbeda — seperti menemukan tempat yang belum diberitahu ke siapa-siapa.</p>
+                    <div class="testi-person">
+                        <div class="testi-avatar">
+                            <img src="assets/img/avatar-1.jpg" alt="Foto profil Amelia Putri" loading="lazy">
+                        </div>
+                        <div style="text-align:left;"><div class="testi-name">Amelia Putri</div><div class="testi-role">Traveler, Jakarta</div></div>
+                    </div>
+                </div>
+                <div class="testi-slide">
+                    <p>Trek menuju curug utamanya menantang tapi terbayar lunas begitu sampai. Warga desanya juga sangat ramah membantu kami memahami rute terbaik.</p>
+                            <div class="testi-person">
+                        <div class="testi-avatar">
+                            <img src="assets/img/avatar-3.jpg" alt="Foto profil Daniel Hartono" loading="lazy">
+                        </div>
+                        <div style="text-align:left;"><div class="testi-name">Daniel Hartono</div><div class="testi-role">Fotografer Lanskap</div></div>
+                    </div>
+                </div>
+                <div class="testi-slide">
+                    <p>Kami membawa anak-anak berkemah di sini dan mereka tidak berhenti bicara tentang kunang-kunang di malam hari. Tempat yang benar-benar berkesan untuk keluarga.</p>
+                            <div class="testi-person">
+                        <div class="testi-avatar">
+                            <img src="assets/img/avatar-1.jpg" alt="Foto profil Sarah Wijaya" loading="lazy">
+                        </div>
+                        <div style="text-align:left;"><div class="testi-name">Sarah Wijaya</div><div class="testi-role">Ibu Dua Anak</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-dots" id="testiDots" role="tablist" aria-label="Navigasi testimoni"></div>
+        </div>
+    </section>
+
+    <!-- ================= VISIT / MAP ================= -->
+    <section class="visit section-pad" id="kunjungi" aria-label="Rencanakan kunjungan">
+        <div class="wrap">
+            <div class="visit-grid reveal">
+                <div class="visit-info">
+                    <div class="eyebrow">Rencanakan Kunjungan</div>
+                    <h2>Mrebet menantimu, kapan pun kau siap.</h2>
+                    <p>Terletak di Kecamatan Mrebet, Kabupaten Purbalingga, Jawa Tengah — mudah dijangkau namun terasa jauh dari keramaian.</p>
+                    <div class="visit-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21c-4-3-8-6.5-8-11a8 8 0 0116 0c0 4.5-4 8-8 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                        <div><strong>Lokasi</strong>Kec. Mrebet, Kab. Purbalingga, Jawa Tengah</div>
+                    </div>
+                    <div class="visit-detail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                        <div><strong>Jam Operasional</strong>06.00 – 17.00 WIB, setiap hari</div>
+                    </div>
+                    <!-- TOMBOL BOOK NOW → WHATSAPP -->
+                    <a href="https://wa.me/6281398480422?text=Halo%20Wisata%20Mrebet%2C%20saya%20ingin%20booking%20kunjungan." target="_blank" class="btn btn-gold">Book Now</a>
+
+                    <div class="qr-block">
+                        <img id="qrCodeImg" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=8&data=https://www.wisatamrebet.id" alt="Kode QR menuju website Wisata Mrebet" loading="lazy" width="84" height="84">
+                        <div class="qr-block-text">
+                            <strong>Scan untuk buka website ini di ponsel</strong>
+                            <span>Simpan itinerary, peta, dan info acara langsung dari genggaman — cocok ditempel di brosur atau papan info lokasi.</span>
+                            <button class="qr-download-btn" id="qrDownloadBtn" type="button" data-qr-src="https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&margin=12&data=https://www.wisatamrebet.id" aria-label="Download QR code">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v13m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+                                <span id="qrDownloadLabel">Download QR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="visit-map">
+                    <iframe
+                    src="https://www.google.com/maps?q=-7.3168897,109.3491433&hl=id&z=13&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Peta lokasi Kecamatan Mrebet, Purbalingga">
+                </iframe>
+                <a class="map-open-btn" href="https://www.google.com/maps/dir/?api=1&destination=-7.3168897,109.3491433" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 20l-6-3V4l6 3 6-3 6 3v13l-6-3-6 3z"/><path d="M9 4v13M15 7v13"/></svg>
+                    Ambil Rute
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer role="contentinfo">
+    <div class="wrap">
+        <div class="footer-top">
+            <div>
+                <div class="footer-logo">
+                    <svg viewBox="0 0 24 24" fill="none" width="22" height="22" aria-hidden="true"><path d="M12 2C12 2 6 9 6 14a6 6 0 0012 0c0-5-6-12-6-12z" fill="var(--gold-soft)"/></svg>
+                    Wisata Mrebet
+                </div>
+                <p>Destinasi wisata alam di Purbalingga, Jawa Tengah — tempat curug, hutan pinus, dan keheningan bertemu.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
+                    <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 10l4 2-4 2v-4z" fill="currentColor" stroke="none"/></svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Navigasi</h5>
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#destinasi">Destinasi</a></li>
+                    <li><a href="#aktivitas">Pengalaman</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
+                    <li><a href="#acara">Acara</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Perusahaan</h5>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kerja Sama Lokal</a></li>
+                    <li><a href="#">Karier</a></li>
+                    <li><a href="#">Pers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Kontak</h5>
+                <ul>
+                    <li><a href="#">halo@wisatamrebet.id</a></li>
+                    <li><a href="#">+62 812-0000-0000</a></li>
+                    <li><a href="#">Kec. Mrebet, Purbalingga</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 Wisata Mrebet. Seluruh hak cipta dilindungi.</div>
+            <div>Dibuat dengan hormat pada tanah dan air Mrebet.</div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+
+<!-- Non-editable: disable typing / editing on the page -->
+<script>
+    (function(){
+        try { document.designMode = 'off'; } catch(e){}
+        // Ensure no element is accidentally editable
+        document.querySelectorAll('*').forEach(function(el){ el.contentEditable = 'false'; });
+
+        // Prevent input/typing and beforeinput events globally
+        function blockInput(e){
+            // Allow navigation keys
+            if (e.key && (e.key.length === 1 || e.type === 'beforeinput')) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }
+        document.addEventListener('keydown', blockInput, true);
+        document.addEventListener('beforeinput', function(e){ e.preventDefault(); }, true);
+
+        // Hide caret to avoid visible text cursor
+        var style = document.createElement('style');
+        style.innerHTML = '* { caret-color: transparent !important; }';
+        document.head.appendChild(style);
+    })();
+</script>
+
+<!-- Mobile Bottom Navigation -->
+<div id="mobileBottomNav" class="mobile-bottom-nav">
+    <a href="#acara" class="nav-item">Acara</a>
+    <a href="#kunjungi" class="nav-item">Kontak</a>
+    <a href="https://wa.me/6281398480422?text=Halo%20Wisata%20Mrebet%2C%20saya%20ingin%20booking%20kunjungan." target="_blank" class="nav-item nav-book">Book Now</a>
+</div>
+
+</body>
+</html>
